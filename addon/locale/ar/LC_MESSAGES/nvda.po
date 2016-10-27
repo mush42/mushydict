@@ -1,0 +1,54 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: 'mushydict' '1.0'\n"
+"Report-Msgid-Bugs-To: 'nvda-translations@freelists.org'\n"
+"POT-Creation-Date: 2016-10-27 15:11+0300\n"
+"PO-Revision-Date: 2016-10-27 15:21+0300\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"X-Generator: Poedit 1.8.4\n"
+
+#: addon\globalPlugins\mushydict\__init__.py:39
+msgid "No selection"
+msgstr "لم تقم بتحديد أي نص."
+
+#: addon\globalPlugins\mushydict\__init__.py:41
+msgid "Translates selected phrase using Mushy Dictionary"
+msgstr "ترجمة النص المحدد بإستخدام قاموس Mushy"
+
+#. Add-on summary, usually the user visible name of the addon.
+#. TRANSLATORS: Summary for this add-on to be shown on installation and add-on information.
+#: addon\globalPlugins\mushydict\dialogs.py:10 buildVars.py:17
+msgid "Mushy Dictionary"
+msgstr "قاموس Mushy"
+
+#: addon\globalPlugins\mushydict\dialogs.py:18
+msgid "&Matches"
+msgstr "نتائج الترجمة"
+
+#: addon\globalPlugins\mushydict\dialogs.py:20
+msgid "Phrase"
+msgstr "العبارة"
+
+#: addon\globalPlugins\mushydict\dialogs.py:21
+msgid "Translation"
+msgstr "الترجمة"
+
+#. Add-on description
+#. Translators: Long description to be shown for this add-on on add-on information from add-ons manager
+#: buildVars.py:20
+msgid ""
+"\n"
+"    A Little Arabic - English, English - Arabic dictionary for your NVDA.\n"
+"    Select a phrase and then press NVDA plus D to show translations.    \n"
+"    "
+msgstr "\n قاموس عربي - إنجليزي، إنجليزي - عربي لمستخدمي  NVDA. قم بإختيار كلمة أو عبارة ثم إضغط مفتاح NVDA زائد الحرف (ي) للحصول على الترجمة."

@@ -54,11 +54,13 @@ class GlobalPlugin(globalPluginHandler.GlobalPlugin):
         return info.clipboardText
 
     def translate(self, word):
-        eng = latin.match(word)
-        if eng is not None:
-            sql = "select * from words_list where en like '%%%s%%' limit 10" %word
-        else:
-            sql = "select * from words_list where ar like '%%%s%%' limit 10" %word
-        return ((i[2], i[3]) if eng else (i[3], i[2]) for i in self.cursor.execute(sql).fetchall())
+        lang = 'en' if latin.match(word) else 'ar'
+        probable = "select * from words_list where %s like '%s' limit 5" %(lang, word)
+        probable_2 = "select * from words_list where %s like '%s%%' limit 8" %(lang, word)
+        any = "select * from words_list where %s like '%%%s%%' limit 5" %(lang, word)
+        rv = list(self.cursor.execute(probable).fetchall())
+        rv.extend([item for item in self.cursor.execute(probable_2).fetchall() if item not in rv])
+        rv.extend([item for item in self.cursor.execute(any).fetchall() if item not in rv])
+        return ((i[2], i[3]) if lang=='en' else (i[3], i[2]) for i in rv)
 
     __gestures = {'kb:nvda+d': 'translate_phrase'}
